@@ -148,7 +148,7 @@ const ImageEditor = () => {
     img.crossOrigin = 'anonymous';
 
     // 首先尝试加载PNG格式
-    img.src = '/kfc.png';
+    img.src = 'https://www.viwoplus.site/kfc.png';
 
     // 图片加载完成后绘制
     img.onload = () => {
