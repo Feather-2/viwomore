@@ -141,12 +141,12 @@ const ImageEditor = () => {
       currentX += charWidth + letterSpacing;
     }
 
-    // 在图片底部添加小白字"根据汇率实时计算"
+    // 在图片底部添加小白字"实时计算"
     ctx.font = 'bold 14px Arial';
     ctx.fillStyle = 'rgb(243, 225, 182)'; // 淡黄色
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
-    ctx.fillText('根据汇率实时计算', canvas.width / 2, canvas.height - 10);
+    ctx.fillText('VIWO 50+', canvas.width / 2, canvas.height - 10);
   };
 
   // 尝试加载图片
