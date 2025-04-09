@@ -106,7 +106,10 @@ const ImageEditor = () => {
     // 假设按钮在图片底部中间位置
     const newButtonXplus = digitCount >= 4 ? 124 : (digitCount === 3 ? 118 : 105);
     const buttonX = canvas.width / 2 + newButtonXplus; // 略微向右偏移以适应"V我"后面的位置
-    const buttonY = canvas.height * 0.842; // 位于图片70%高度处
+
+    // 检测是手机端还是电脑端来调整 Y 坐标
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768; // 小于768px视为手机端
+    const buttonY = canvas.height * (isMobile ? 0.83 : 0.85); // 根据设备类型调整 Y 坐标
 
     // 将数字拆分为单个字符，并为每个字符添加间距
     const amountStr = calculatedAmount.toString();
