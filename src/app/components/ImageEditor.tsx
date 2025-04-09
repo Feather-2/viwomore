@@ -96,7 +96,13 @@ const ImageEditor = () => {
 
     // 根据数字位数调整字体大小
     const digitCount = calculatedAmount.toString().length;
-    const fontSize = digitCount >= 4 ? 100 : (digitCount === 3 ? 130 : 140); // 如果是4位及以上，字体大小为84px，否则为120px
+    let baseFontSize = digitCount >= 4 ? 100 : (digitCount === 3 ? 130 : 140); // 先计算基础字体大小
+
+    // 检测是手机端还是电脑端
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768; // 小于768px视为手机端
+
+    // 如果是手机端，字体稍微小一点 (例如，缩小15%)
+    const fontSize = isMobile ? Math.round(baseFontSize * 0.95) : baseFontSize;
 
     ctx.font = `bold ${fontSize}px Arial`; // 调整字体大小
     ctx.textAlign = 'center';
@@ -107,8 +113,7 @@ const ImageEditor = () => {
     const newButtonXplus = digitCount >= 4 ? 124 : (digitCount === 3 ? 118 : 105);
     const buttonX = canvas.width / 2 + newButtonXplus; // 略微向右偏移以适应"V我"后面的位置
 
-    // 检测是手机端还是电脑端来调整 Y 坐标
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768; // 小于768px视为手机端
+    // const isMobile = typeof window !== 'undefined' && window.innerWidth < 768; // 小于768px视为手机端 - 已移到前面
     const buttonY = canvas.height * (isMobile ? 0.833 : 0.85); // 根据设备类型调整 Y 坐标
 
     // 将数字拆分为单个字符，并为每个字符添加间距
