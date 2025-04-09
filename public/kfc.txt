@@ -1,0 +1,1 @@
+这里应该是KFC图片，由于我们无法直接下载图片，请手动将图片保存为public/kfc.png或public/kfc.jpg
