@@ -310,7 +310,7 @@ const ImageEditor = () => {
       {!imageLoaded && (
         <div className="bg-red-50 border-l-4 border-red-600 text-red-800 p-4 rounded-lg shadow-md w-full">
           <p className="font-bold">提示</p>
-          <p>未找到KFC图片，请将图片保存至 public/kfc.png 或 public/kfc.jpg 以获得完整体验。</p>
+          <p>未找到KFC图片，请重启以获得完整体验（也可能不行）。</p>
         </div>
       )}
 
