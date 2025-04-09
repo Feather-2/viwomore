@@ -109,7 +109,7 @@ const ImageEditor = () => {
 
     // 检测是手机端还是电脑端来调整 Y 坐标
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768; // 小于768px视为手机端
-    const buttonY = canvas.height * (isMobile ? 0.83 : 0.85); // 根据设备类型调整 Y 坐标
+    const buttonY = canvas.height * (isMobile ? 0.833 : 0.85); // 根据设备类型调整 Y 坐标
 
     // 将数字拆分为单个字符，并为每个字符添加间距
     const amountStr = calculatedAmount.toString();
