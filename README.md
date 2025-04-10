@@ -37,7 +37,7 @@ npm run dev
 2. 输入涨幅百分比（例如84%）
 3. 点击"计算"按钮
 4. 图片上会显示计算后的金额（如：V我92）
-**注意,项目在vercel部署的时候,需要修改src/app/components/ImageEditor.tsx 里的png地址到https://yourdomain/kfc.png,否则可能在中国大陆无法显示。**
+**注意,项目在vercel部署的时候,需要修改src/app/components/ImageEditor.tsx 里的png地址到https://yourdomain/kfc.png,否则可能无法显示。**
 5. 点击"下载图片"按钮保存生成的图片
 
 ## 部署到Vercel
